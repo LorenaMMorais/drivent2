@@ -31,3 +31,21 @@ export type RequestError = {
 export type TicketsInput = {
   ticketTypeId: number;
 };
+
+export type PaymentType = {
+  ticketId: number;
+  value: number;
+  cardIssuer: string;
+  cardLastDigits: string;
+};
+
+export type PaymentInput = {
+  ticketId: number;
+  cardData: {
+    issuer: string;
+    number: number;
+    name: string;
+    expirationDate: Date;
+    cvv: number;
+  };
+};
