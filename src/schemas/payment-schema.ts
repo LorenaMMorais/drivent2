@@ -9,7 +9,7 @@ export const paymentSchema = joi.object<PaymentInput>({
       number: joi.string().required(),
       name: joi.string().required(),
       expirationDate: joi.string().required(),
-      cvv: joi.string().required,
+      cvv: joi.string().required(),
     })
     .required(),
 });
