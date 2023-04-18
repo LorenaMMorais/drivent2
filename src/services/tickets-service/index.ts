@@ -9,7 +9,7 @@ export async function getAllTicketsTypes() {
   return result;
 }
 
-export async function getUserTicket(userId: number) {
+async function getUserTicket(userId: number) {
   const result = await ticketsRepository.getUserTicketById(userId);
 
   if (!result) {
@@ -19,7 +19,7 @@ export async function getUserTicket(userId: number) {
   return result;
 }
 
-export async function postTicket(userId: number, ticketTypeId: number) {
+async function postTicket(userId: number, ticketTypeId: number) {
   const result = await enrollmentRepository.findByUserId(userId);
 
   if (!result) {
@@ -33,3 +33,11 @@ export async function postTicket(userId: number, ticketTypeId: number) {
 
   return response;
 }
+
+const ticketsService = {
+  getAllTicketsTypes,
+  getUserTicket,
+  postTicket,
+};
+
+export default ticketsService;

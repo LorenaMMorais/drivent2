@@ -53,10 +53,3 @@ export async function postPayment(paymentData: PaymentType, paymentDataInput: Pa
 
   return payment;
 }
-
-/*const paymentServices = {
-  findPayment,
-  postPayment
-}
-
-export default paymentServices;*/
